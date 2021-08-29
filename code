@@ -1,0 +1,28 @@
+var buttons = document.getElementsByClassName("next_button___YGZWZ");
+setInterval(function() {
+    console.log("...脚本执行中...")
+    var button = buttons[0];
+    if(typeof(button) != 'undefined'){
+        console.log("---选择下一个章节---")
+        button.click();
+    }
+},5000);
+var outters = document.getElementsByClassName("outter");
+setInterval(function() {
+    console.log("...脚本执行中...")
+    var playing = document.getElementsByClassName("prism-big-play-btn");
+    var attr = playing[0].getAttribute('class');
+    if(attr.indexOf('playing') < 0){
+        var outter = outters[0];
+        if(typeof(outter) != 'undefined'){
+            console.log("---开始播放---")
+            outter.click();
+        }
+    }
+},5000);
+setInterval(function() {
+    var ant = document.getElementsByClassName("ant-btn-primary");
+    if(ant.length != 0){
+        ant[0].click();
+    }
+},5000);
